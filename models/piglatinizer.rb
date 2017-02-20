@@ -37,7 +37,8 @@ class PigLatinizer
     new_word= split_phrase.map do |word|
       word =piglatinize(word)
     end
-    new_word.join(' ').strip
+    new_word.join(' ').strip.to_s
+
   end
   #1.collect first letter from string
   #2. take collected latter and constat "ay" and put at end of string
