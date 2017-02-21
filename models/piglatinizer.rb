@@ -1,3 +1,4 @@
+
 class PigLatinizer
 
   attr_accessor :text
@@ -10,19 +11,20 @@ class PigLatinizer
     new_word=""
     if string.start_with?('a','e','i','o','u','A','E','I','O','U')
       new_word << ("#{string}""way")
-    elsif string.start_with?('pl','sk','th','st','pr')
+    elsif string.start_with?('pl','sk','th','st','pr','wh')
       cut_word = string[2..-1]
       cut_first_letter = string.slice(0..1)
       ay_added= ("#{cut_first_letter}"  "ay")
       new_word=("#{cut_word}#{ay_added}")
       new_word
-    elsif string.start_with?('spr')
+    elsif string.start_with?('spr','Str')
       cut_word = string[3..-1]
       cut_first_letter = string.slice(0..2)
       ay_added= ("#{cut_first_letter}""ay")
       new_word=("#{cut_word}#{ay_added}")
       new_word
     else
+      
       cut_word = string[1..-1]
       cut_first_letter = string.slice(0)
       ay_added= ("#{cut_first_letter}"  "ay")
